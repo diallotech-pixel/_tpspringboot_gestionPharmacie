@@ -1,16 +1,9 @@
 spring:
   application:
     name: gestion_pharmacie
-  datasource:
-    url: ${DATABASE_URL}
-    password: ${PASSWORD}
-    username: ${USER}
-  jpa:
-    hibernate:
-      ddl-auto: create
 
   profiles:
-    active: ${SERVER},${PROFILE}
+    active: ${DB_TYPE},${PROFILE},${USER_CONFIG}
 
 logging:
   level:
